@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import lottie from 'lottie-web';
 import bookWalkAnimation from '../assets/book-walk.json';
+import Footer from '../components/Footer';
 import './StartScreen.css';
 
 const StartScreen = () => {
@@ -39,15 +40,6 @@ const StartScreen = () => {
     console.log('Rango de edad seleccionado:', ageRange);
     // Aquí podrías manejar la lógica de navegación o guardar el rango seleccionado
   };
-
-  // Datos de ejemplo para la tabla
-  const topScores = [
-    { position: 1, name: 'María González', score: 850 },
-    { position: 2, name: 'Carlos Pérez', score: 780 },
-    { position: 3, name: 'Ana López', score: 720 },
-    { position: 4, name: 'Luis Martín', score: 650 },
-    { position: 5, name: 'Sofia Ruiz', score: 590 }
-  ];
 
   return (
     <div className="start-screen">
@@ -96,27 +88,9 @@ const StartScreen = () => {
             </div>
           </div>
         )}
-        
-        {showAgeRanges && (
-          <div className="leaderboard-section">
-            <h2 className="leaderboard-title">Mejores puntuados</h2>
-            <div className="leaderboard-table">
-              <div className="table-header">
-                <div className="table-cell">Pos.</div>
-                <div className="table-cell">Nombre</div>
-                <div className="table-cell">Puntaje</div>
-              </div>
-              {topScores.map((player) => (
-                <div key={player.position} className="table-row">
-                  <div className="table-cell">{player.position}</div>
-                  <div className="table-cell">{player.name}</div>
-                  <div className="table-cell">{player.score}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
       </div>
+      
+      <Footer />
     </div>
   );
 };
