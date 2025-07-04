@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
 @font-face {
-  font-family: 'Orbit';
-  src: url('../assets/fonts/orbit.ttf') format('truetype');
+  font-family: 'Summer';
+  src: url('../assets/fonts/summer.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -52,7 +52,7 @@
 .start-button {
   background-color: var(--color-secondary);
   color: var(--color-primary);
-  font-family: 'Orbit', sans-serif;
+  font-family: 'Summer', sans-serif;
   font-size: 1.3rem;
   font-weight: 600;
   padding: 15px 30px;
@@ -75,9 +75,9 @@
 .start-button::after {
   content: '→';
   color: var(--color-primary);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   position: absolute;
-  right: 20px;
+  right: 25px;
   top: 50%;
   transform: translateY(-50%);
   font-weight: bold;
@@ -107,9 +107,9 @@
 
 .age-ranges-title {
   font-family: 'Adorable', cursive, sans-serif;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: var(--color-primary);
-  margin-bottom: 35px;
+  margin-bottom: 40px;
   font-weight: bold;
 }
 
@@ -123,8 +123,8 @@
 .age-range-button {
   background-color: var(--color-secondary);
   color: var(--color-primary);
-  font-family: 'Orbit', sans-serif;
-  font-size: 1.2rem;
+  font-family: 'Summer', sans-serif;
+  font-size: 1rem;
   font-weight: 600;
   padding: 15px 30px;
   border-radius: 50px;
@@ -158,6 +158,49 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Transition Overlay */
+.transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.transition-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.transition-animation {
+  width: 300px;
+  height: 300px;
+  max-width: 80vw;
+  max-height: 80vh;
+}
+
+/* Ready to Play Screen */
+.ready-to-play-content {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.ready-to-play-content p {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  margin: 15px 0;
+  line-height: 1.5;
 }
 
 /* Footer */
@@ -238,15 +281,15 @@
   }
   
   .start-button {
-    font-family: 'Orbit', sans-serif;
-    font-size: 1.4rem;
+    font-family: 'Summer', sans-serif;
+    font-size: 1.5rem;
     padding: 18px 40px;
     max-width: 350px;
     min-height: 55px;
   }
   
   .start-button::after {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     right: 25px;
     top: 50%;
     transform: translateY(-50%);
@@ -258,8 +301,8 @@
   }
   
   .age-range-button {
-    font-family: 'Orbit', sans-serif;
-    font-size: 1.4rem;
+    font-family: 'Summer', sans-serif;
+    font-size: 1.3rem;
     padding: 18px 40px;
     max-width: 320px;
   }
@@ -307,6 +350,20 @@
   .footer-text p {
     font-size: 1rem;
     margin: 4px 0;
+  }
+  
+  .transition-animation {
+    width: 400px;
+    height: 400px;
+  }
+  
+  .ready-to-play-content {
+    margin-top: 60px;
+  }
+  
+  .ready-to-play-content p {
+    font-size: 1.4rem;
+    margin: 20px 0;
   }
 }
 
