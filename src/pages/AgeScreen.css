@@ -7,7 +7,7 @@
   font-style: normal;
 }
 
-.start-screen {
+.age-screen {
   min-height: 100vh;
   background-color: var(--color-secondary);
   display: flex;
@@ -17,7 +17,7 @@
   padding: 20px;
 }
 
-.start-screen-content {
+.age-screen-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,20 +39,33 @@
   line-height: 1.4;
 }
 
-.animation-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: scale(1.6) translateX(5px);
-  overflow: visible;
-  margin-bottom: 10px;
+/* Sección de rangos de edad */
+.age-ranges-section {
+  width: 100%;
+  margin-top: 30px;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
-.start-button {
+.age-ranges-title {
+  font-family: 'Adorable', cursive, sans-serif;
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.age-ranges-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.age-range-button {
   background-color: var(--color-secondary);
   color: var(--color-primary);
   font-family: 'Summer', sans-serif;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 600;
   padding: 15px 30px;
   border-radius: 50px;
@@ -60,41 +73,32 @@
   cursor: pointer;
   transition: all 0.3s ease;
   width: 100%;
-  max-width: 300px;
-  margin: 20px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 50px;
+  max-width: 280px;
+  margin: 0 auto;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
-.start-button::after {
-  content: '→';
-  color: var(--color-primary);
-  font-size: 1.4rem;
-  position: absolute;
-  right: 25px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-weight: bold;
-}
-
-.start-button:hover {
+.age-range-button:hover {
   background-color: var(--color-primary);
   color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.start-button:hover::after {
-  color: white;
-}
-
-.start-button:active {
+.age-range-button:active {
   transform: translateY(0);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Footer */
@@ -170,22 +174,23 @@
     margin-bottom: 30px;
   }
   
-  .start-button {
+  .age-ranges-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  .age-range-button {
     font-family: 'Summer', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding: 18px 40px;
-    max-width: 350px;
-    min-height: 55px;
+    max-width: 320px;
   }
   
-  .start-button::after {
-    font-size: 1.5rem;
-    right: 25px;
-    top: 50%;
-    transform: translateY(-50%);
+  .age-ranges-container {
+    gap: 20px;
   }
   
-  .start-screen-content {
+  .age-screen-content {
     gap: 22px;
     margin: 5vh auto 0;
   }
@@ -224,5 +229,19 @@
   .footer-text p {
     font-size: 1rem;
     margin: 4px 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .age-ranges-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .age-range-button {
+    max-width: none;
   }
 } 

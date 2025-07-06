@@ -7,7 +7,7 @@
   font-style: normal;
 }
 
-.start-screen {
+.game-screen {
   min-height: 100vh;
   background-color: var(--color-secondary);
   display: flex;
@@ -17,7 +17,7 @@
   padding: 20px;
 }
 
-.start-screen-content {
+.game-screen-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,62 +39,34 @@
   line-height: 1.4;
 }
 
-.animation-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: scale(1.6) translateX(5px);
-  overflow: visible;
-  margin-bottom: 10px;
-}
-
-.start-button {
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
-  font-family: 'Summer', sans-serif;
-  font-size: 1.3rem;
-  font-weight: 600;
-  padding: 15px 30px;
-  border-radius: 50px;
-  border: 2px solid var(--color-primary);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  width: 100%;
-  max-width: 300px;
-  margin: 20px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.game-content {
   text-align: center;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 50px;
+  margin-top: 60px;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
-.start-button::after {
-  content: '→';
+.game-content p {
+  font-size: 1.2rem;
   color: var(--color-primary);
-  font-size: 1.4rem;
-  position: absolute;
-  right: 25px;
-  top: 50%;
-  transform: translateY(-50%);
+  margin: 15px 0;
+  line-height: 1.5;
+}
+
+.game-content strong {
+  color: var(--color-primary);
   font-weight: bold;
 }
 
-.start-button:hover {
-  background-color: var(--color-primary);
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.start-button:hover::after {
-  color: white;
-}
-
-.start-button:active {
-  transform: translateY(0);
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Footer */
@@ -170,24 +142,18 @@
     margin-bottom: 30px;
   }
   
-  .start-button {
-    font-family: 'Summer', sans-serif;
-    font-size: 1.5rem;
-    padding: 18px 40px;
-    max-width: 350px;
-    min-height: 55px;
-  }
-  
-  .start-button::after {
-    font-size: 1.5rem;
-    right: 25px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  .start-screen-content {
+  .game-screen-content {
     gap: 22px;
     margin: 5vh auto 0;
+  }
+  
+  .game-content {
+    margin-top: 60px;
+  }
+  
+  .game-content p {
+    font-size: 1.4rem;
+    margin: 20px 0;
   }
   
   .footer {
