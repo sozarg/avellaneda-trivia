@@ -6,9 +6,9 @@
 avellaneda-trivia/
 ├── src/
 │   ├── assets/
-│   │   └── book-walk.json (placeholder - reemplazar con tu archivo)
+│   │   └── book-walk.json
 │   ├── components/
-│   │   └── book-walk.json (placeholder - reemplazar con tu archivo)
+│   │   └── book-walk.json
 │   ├── pages/
 │   │   ├── StartScreen.jsx
 │   │   └── StartScreen.css
