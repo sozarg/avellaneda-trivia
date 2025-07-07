@@ -53,7 +53,7 @@ const StartScreen = ({ onStartClick }) => {
         </button>
       </div>
       
-      <Footer />
+      <Footer theme="light" />
     </div>
   );
 };

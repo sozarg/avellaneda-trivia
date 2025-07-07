@@ -43,7 +43,7 @@ const AgeScreen = ({ onAgeRangeSelect }) => {
         </div>
       </div>
       
-      <Footer />
+      <Footer theme="light" />
     </div>
   );
 };

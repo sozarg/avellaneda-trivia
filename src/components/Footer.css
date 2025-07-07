@@ -1,0 +1,153 @@
+/* Footer base */
+.footer {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 40px;
+  background-color: transparent;
+  position: relative;
+}
+
+.footer-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 18px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3px;
+}
+
+.footer-logo img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.footer-text {
+  text-align: left;
+  margin-top: 5px;
+}
+
+.footer-text h3 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-size: 1.4rem;
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.footer-text p {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-size: 0.9rem;
+  margin: 3px 0;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+/* Variante LIGHT - Para StartScreen y AgeScreen (fondo claro) */
+.footer-light::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background-color: var(--color-primary);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.footer-light .footer-text h3 {
+  color: var(--color-primary);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.footer-light .footer-text p {
+  color: var(--color-primary);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.footer-light .footer-logo img {
+  /* Logo en su color original para pantallas claras */
+  filter: none;
+}
+
+/* Variante DARK - Para GameScreen (fondo degradado oscuro) */
+.footer-dark::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: none;
+}
+
+.footer-dark .footer-text h3 {
+  color: #FFFFFF;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.footer-dark .footer-text p {
+  color: #FFFFFF;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.footer-dark .footer-logo img {
+  /* Logo en su color original para pantallas oscuras también */
+  filter: none;
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+  .footer {
+    padding: 25px 0;
+    margin-top: 50px;
+  }
+  
+  .footer-light::before {
+    width: 70%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  }
+  
+  .footer-dark::before {
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: none;
+  }
+  
+  .footer-content {
+    gap: 22px;
+  }
+  
+  .footer-logo {
+    margin-top: 5px;
+  }
+  
+  .footer-logo img {
+    width: 75px;
+    height: 75px;
+  }
+  
+  .footer-text {
+    margin-top: 8px;
+  }
+  
+  .footer-text h3 {
+    font-size: 1.6rem;
+  }
+  
+  .footer-text p {
+    font-size: 1rem;
+    margin: 4px 0;
+  }
+} 
