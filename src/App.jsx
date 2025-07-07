@@ -75,7 +75,7 @@ function App() {
       {/* Pantalla anterior (saliendo) */}
       {isTransitioning && previousScreen && renderScreen(previousScreen, true)}
       
-      {/* Pantalla actual (entrando) */}
+      {/* Pantalla actual (entrando)  */}
       {renderScreen(currentScreen, false)}
     </div>
   );
