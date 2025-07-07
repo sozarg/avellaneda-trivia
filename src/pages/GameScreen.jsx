@@ -203,7 +203,7 @@ const GameScreen = ({ selectedAgeRange }) => {
             </button>
           </div>
         </div>
-        <Footer theme="dark" />
+        <Footer theme="light" />
       </div>
     );
   }
@@ -219,7 +219,7 @@ const GameScreen = ({ selectedAgeRange }) => {
             <p>Rango: <strong>{selectedAgeRange}</strong></p>
           </div>
         </div>
-        <Footer theme="dark" />
+        <Footer theme="light" />
       </div>
     );
   }
@@ -246,11 +246,8 @@ const GameScreen = ({ selectedAgeRange }) => {
         </div>
 
         <div className="question-container">
-          <h2 className="question-text">{currentQuestion.question}</h2>
-          <div className="question-type-indicator">
-            <span className={`type-badge ${currentQuestion.type}`}>
-              {currentQuestion.type === 'text' ? 'Texto' : 'Imagen'}
-            </span>
+          <div className="question-header">
+            <h2 className="question-text">{currentQuestion.question}</h2>
           </div>
           
           {renderOptions()}
@@ -273,7 +270,7 @@ const GameScreen = ({ selectedAgeRange }) => {
         </div>
       </div>
       
-      <Footer theme="dark" />
+      <Footer theme="light" />
     </div>
   );
 };

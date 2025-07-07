@@ -1,4 +1,4 @@
-/* Footer base */
+/* Footer base - Unificado para todas las pantallas */
 .footer {
   width: 100%;
   padding: 20px 0;
@@ -107,7 +107,7 @@
   filter: none;
 }
 
-/* Responsive design */
+/* Responsive design - Unificado para todas las pantallas */
 @media (min-width: 768px) {
   .footer {
     padding: 25px 0;
